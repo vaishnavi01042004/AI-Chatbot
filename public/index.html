@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <!-- Sidebar: Persona Selector -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Cognify</h2>
+        <p>Your AI Study Assistant</p>
+      </div>
+
+      <div class="persona-section">
+        <h3>Choose Persona</h3>
+        <button class="persona-btn active" data-persona="tutor">
+          <span class="persona-icon">📚</span>
+          <span class="persona-info">
+            <strong>Study Buddy</strong>
+            <small>Explains concepts clearly</small>
+          </span>
+        </button>
+        <button class="persona-btn" data-persona="coder">
+          <span class="persona-icon">💻</span>
+          <span class="persona-info">
+            <strong>Code Guru</strong>
+            <small>Programming mentor</small>
+          </span>
+        </button>
+        <button class="persona-btn" data-persona="quiz">
+          <span class="persona-icon">🧠</span>
+          <span class="persona-info">
+            <strong>Quiz Master</strong>
+            <small>Test your knowledge</small>
+          </span>
+        </button>
+        <button class="persona-btn" data-persona="motivator">
+          <span class="persona-icon">🔥</span>
+          <span class="persona-info">
+            <strong>Coach Spark</strong>
+            <small>Stay motivated</small>
+          </span>
+        </button>
+      </div>
+
+      <button class="reset-btn" id="resetBtn">
+        🗑️ Clear Chat
+      </button>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <div class="chat-header">
+        <h1 id="currentPersona">📚 Study Buddy</h1>
+        <span class="status-badge">Online</span>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="message bot-message">
+          <div class="message-avatar">🤖</div>
+          <div class="message-content">
+            <p>Hey there! 👋 I'm your <strong>Study Buddy</strong>. Ask me anything about Physics, Chemistry, Maths, or any subject you're curious about!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="userInput"
+            placeholder="Ask me anything..."
+            rows="1"
+          ></textarea>
+          <button id="sendBtn" class="send-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13" /><path d="M22 2L15 22L11 13L2 9L22 2Z" />
+            </svg>
+          </button>
+        </div>
+        <p class="disclaimer">Cognify can make mistakes. Always verify important information.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
